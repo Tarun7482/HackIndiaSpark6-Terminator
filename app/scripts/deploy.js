@@ -2,13 +2,13 @@ const hre = require("hardhat");
 
 async function main() {
     console.log("Displaying the smart contract..");
-    const Medical = await hre.ethers.getContractFactory("MedicalRecord");
-    const medical = await Medical.deploy();
+    const MedicalRecord = await hre.ethers.getContractFactory("MedicalRecord");
+    const Medical = await MedicalRecord.deploy();
     
     console.log("Deploying contract...");
-    await medical.waitForDeployment();
+    await Medical.waitForDeployment();
     
-    const address = await medical.getAddress();
+    const address = await Medical.getAddress();
     console.log(`Medical contract deployed to address: ${address}`);
 }
 

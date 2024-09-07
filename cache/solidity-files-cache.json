@@ -1,13 +1,14 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "D:\\HackIndia\\my-react-app\\contracts\\MyContract.sol": {
-      "lastModificationDate": 1725562672462,
-      "contentHash": "74d2776758470ccd74428a5582ae0a2c",
-      "sourceName": "contracts/MyContract.sol",
+    "D:\\HackIndia\\my-react-app\\contracts\\MedicalRecord.sol": {
+      "lastModificationDate": 1725650478753,
+      "contentHash": "8a6782090d228ee298257030b2f1bf2a",
+      "sourceName": "contracts/MedicalRecord.sol",
       "solcConfig": {
-        "version": "0.7.3",
+        "version": "0.8.24",
         "settings": {
+          "evmVersion": "paris",
           "optimizer": {
             "enabled": false,
             "runs": 200
