@@ -5,7 +5,7 @@ import { providerLoaded, networkLoaded, accountLoaded, etherBalanceLoaded } from
 // Load Provider
 export const loadProvider = (dispatch) => {
   if (typeof window.ethereum === "undefined") {
-    throw new Error("No Ethereum wallet provider was found.");
+    return null;
   }
   const connection = new BrowserProvider(window.ethereum);
   dispatch(providerLoaded({ connection }));
@@ -14,6 +14,9 @@ export const loadProvider = (dispatch) => {
 
 // Load Network
 export const loadNetwork = async (provider, dispatch) => {
+  if (!provider) {
+    throw new Error("No Ethereum wallet provider was found.");
+  }
   const network = await provider.getNetwork();
   const chainId = network.chainId;
   const chainIdString = typeof chainId === "bigint" ? chainId.toString() : chainId;
